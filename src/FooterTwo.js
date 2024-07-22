@@ -56,6 +56,7 @@ const FooterTwo = () => {
               allowFullScreen=""
               aria-hidden="false"
               tabIndex="0"
+              title="responsive-map"
             ></iframe>
           </Col>
         </Row>
