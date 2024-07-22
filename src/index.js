@@ -2,12 +2,68 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import reportWebVitals from './reportWebVitals';
+import Contact from './Contact';
+import CoachPage from './CoachPage';
+import DailyAccess from './DailyAccess';
+import KidsClub from './KidsClub';
+import LogIn from './LogIn';
+import SignIn from './SignIn';
+import ProfilePage from './ProfilePage';
+
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+  },
+  {
+    path: "Contact",
+    element: <Contact/>,
+  },
+  {
+    path: "CoachPage",
+    element: <CoachPage/>,
+  },
+  {
+    path: "DailyAccess",
+    element: <DailyAccess/>,
+  },
+  {
+    path: "KidsClub",
+    element: <KidsClub/>,
+  },
+  {
+    path: "LogIn",
+    element: <LogIn/>,
+  },
+  {
+    path: "SignIn",
+    element: <SignIn/>,
+  },
+  {
+    path: "SignIn",
+    element: <SignIn/>,
+  },
+  {
+    path: "ProfilePage",
+    element: <ProfilePage/>,
+  },
+
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
